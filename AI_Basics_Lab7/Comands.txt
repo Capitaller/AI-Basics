@@ -1,0 +1,22 @@
+Task 1 Розробити ітеративного агента, що проходить заданий грід за допомогою q-learning
+python gridworld.py -a value -i 100 -k 10
+
+Task 2	Пройти “міст”
+python gridworld.py -a value -i 100 -g BridgeGrid --discount 0.9 --noise 0
+
+Task 3
+•	Перейти до першого виходу (+1), ризикуючи шляхом поряд зі скелями (-10)
+python gridworld.py -a value -i 100 -g DiscountGrid -d 0.1 -n 0 -r 0.5 
+•	Перейти до першого виходу (+1), оминаючи скелі (-10)
+python gridworld.py -a value -i 100 -g DiscountGrid -d 0.1 -n 0.1 -r 0.5
+•	Перейти до другого виходу (+10), ризикуючи шляхом поряд зі скелями (-10)
+python gridworld.py -a value -i 100 -g DiscountGrid -d 0.1 -n 0 -r 5
+•	Перейти до другого виходу (+10), оминаючи скелі (-10)
+python gridworld.py -a value -i 100 -g DiscountGrid -d 0.1 -n 0.1 -r 5
+•	Почілити вдалі від скель
+python gridworld.py -a value -i 100 -g DiscountGrid -d 0.1 -n 0 -r 100
+
+Task 4
+python gridworld.py -a q -k 10 --noise 0.0 -e 0.1
+
+python gridworld.py -a q -k 10 --noise 0.0 -e 0.9
